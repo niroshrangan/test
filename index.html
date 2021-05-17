@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    th {
+      padding: 10px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="inputTable">
+    <table>
+      <tr>
+        <th>Weather</th>
+        <th>API description</th>
+        <th>Submit</th>
+      </tr>
+      <tr>
+        <td>Get Weather</td>
+        <td>
+          <label for="north">North</label>
+          <input type="number" id="north">
+          <label for="south">South</label>
+          <input type="number" id="south">
+          <label for="east">East</label>
+          <input type="number" id="east">
+          <label for="west">West</label>
+          <input type="number" id="west">
+        </td>
+        <td><button id="apiOneRun">Run</button></td>
+      </tr>
+      <tr>
+        <td>Get Nearby Postal Information</td>
+        <td>
+          <label for="postalcode">Postal code:</label>
+          <input type="number" id="postalcode">
+          <label for="country">Country:</label>
+          <select id="country">
+            <option value="GB">Great Britain</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="US">USA</option>
+            <option value="CH">Switzerland</option>
+          </select>
+          <label for="radius">Radius:</label>
+          <input type="number" id="radius">
+        </td>
+        <td><button id="apiTwoRun">Run</button></td>
+      </tr>
+      <tr>
+        <td>Get Earthquake Information</td>
+        <td>
+          <label for="northE">North</label>
+          <input type="number" id="northE">
+          <label for="southE">South</label>
+          <input type="number" id="southE">
+          <label for="eastE">East</label>
+          <input type="number" id="eastE">
+          <label for="westE">West</label>
+          <input type="number" id="westE">
+        </td>
+        <td><button id="apiThreeRun">Run</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+
+  <div id="apiOneResults">
+    <span>Get Weater API:</span>
+    <table>
+      <tr>
+        <td>Property</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>Clouds: </td>
+        <td id="txtClouds"></td>
+      </tr>
+      <tr>
+        <td>Dew Point: </td>
+        <td id="txtDew"></td>
+      </tr>
+      <tr>
+        <td>Temperature: </td>
+        <td id="txtTemperature"></td>
+      </tr>
+      <tr>
+        <td>Humidity: </td>
+        <td id="txtHumidity"></td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+
+  <div id="apiTwoResults">
+    <span>Get Weater API:</span>
+    <table>
+      <tr>
+        <td>Property</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>Admin Code: </td>
+        <td id="txtAdminCode"></td>
+      </tr>
+      <tr>
+        <td>Admin Name: </td>
+        <td id="txtAdminName"></td>
+      </tr>
+      <tr>
+        <td>Postal Code: </td>
+        <td id="txtPostalCode"></td>
+      </tr>
+      <tr>
+        <td>Place Name: </td>
+        <td id="txtPlaceName"></td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+
+  <div id="apiThreeResults">
+    <span>Get Weater API:</span>
+    <table>
+      <tr>
+        <td>Property</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>Earthquake ID: </td>
+        <td id="txtEarthId"></td>
+      </tr>
+      <tr>
+        <td>Magnitude: </td>
+        <td id="txtMagnitude"></td>
+      </tr>
+      <tr>
+        <td>Latitude: </td>
+        <td id="txtLat"></td>
+      </tr>
+      <tr>
+        <td>Longitude: </td>
+        <td id="txtLong"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+  <script type="application/javascript" src="libs/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--
+{"weatherObservations":[{"lng":-121.78333333333333,"observation":"KEDU 151320Z AUTO 20007KT 9SM CLR 10/08 A2983 RMK AO1","ICAO":"KEDU","clouds":"n/a","dewPoint":"8","datetime":"2021-05-15 13:20:00","temperature":"10","humidity":87,"stationName":"DAVIS","weatherCondition":"n/a","windDirection":200,"windSpeed":"07","lat":38.53333333333333},{"lng":-86.56666666666666,"weatherConditionCode":"HZ","observation":"KFYM 151320Z AUTO 16003KT 6SM HZ CLR 15/08 A3030 RMK A01","ICAO":"KFYM","clouds":"n/a","dewPoint":"8","datetime":"2021-05-15 13:20:00","temperature":"15","humidity":62,"stationName":"Fayetteville Municipal Airport","weatherCondition":"haze","windDirection":160,"windSpeed":"03","lat":35.06666666666667},{"lng":-86.66666666666667,"observation":"KOXI 151320Z AUTO 14005KT 10SM SCT120 16/04 A3026 RMK AO1","ICAO":"KOXI","clouds":"scattered clouds","dewPoint":"4","cloudsCode":"SCT","datetime":"2021-05-15 13:20:00","temperature":"16","humidity":44,"stationName":"KNOX STARKE CTY","weatherCondition":"n/a","windDirection":140,"windSpeed":"05","lat":41.333333333333336},{"lng":128.06666666666666,"observation":"KQEI 151320Z AUTO 00000KT 6000 -SHRA FEW003 OVC026 19/19 A2971 RMK A02 TSNO","ICAO":"KQEI","clouds":"few clouds","dewPoint":"19","cloudsCode":"FEW","datetime":"2021-05-15 13:20:00","temperature":"19","humidity":100,"stationName":"SINNAM TMQ-53P","weatherCondition":"n/a","windDirection":0,"windSpeed":"00","lat":37.95},{"lng":127.95,"observation":"KQEJ 151320Z AUTO 00000KT 2800 SHRA OVC028 20/19 A2970 RMK A02 TSNO","ICAO":"KQEJ","clouds":"overcast","dewPoint":"19","cloudsCode":"OVC","datetime":"2021-05-15 13:20:00","temperature":"20","humidity":93,"stationName":"BANGSAN TMQ-53P","weatherCondition":"n/a","windDirection":0,"windSpeed":"00","lat":38.2},{"lng":128.75,"observation":"KQEN 151320Z AUTO 24005KT M0400 SHRA FG CLR 17/17 A2978 RMK A02 TSNO","ICAO":"KQEN","clouds":"n/a","dewPoint":"17","datetime":"2021-05-15 13:20:00","temperature":"17","humidity":100,"stationName":"DAEGWALLYEOG","weatherCondition":"n/a","windDirection":240,"windSpeed":"05","lat":37.666666666666664},{"lng":127.26666666666667,"observation":"KQEP 151320Z AUTO 33001KT 3200 -SHRA OVC003 20/20 A2971 RMK A02 TSNO","ICAO":"KQEP","clouds":"overcast","dewPoint":"20","cloudsCode":"OVC","datetime":"2021-05-15 13:20:00","temperature":"20","humidity":100,"stationName":"GWANGJUUP","weatherCondition":"n/a","windDirection":330,"windSpeed":"01","lat":37.4},{"lng":127.55,"observation":"KQEQ 151320Z AUTO 04002KT 0400 +RA SCT002 OVC015 20/20 A2972 RMK A02 TSNO","ICAO":"KQEQ","clouds":"scattered clouds","dewPoint":"20","cloudsCode":"SCT","datetime":"2021-05-15 13:20:00","temperature":"20","humidity":100,"stationName":"MUNSAN TMQ-53P","weatherCondition":"n/a","windDirection":40,"windSpeed":"02","lat":37.85},{"lng":128.15,"observation":"KQEW 151320Z AUTO 28001KT 4800 OVC009 20/19 A2972 RMK A02 TSNO","ICAO":"KQEW","clouds":"overcast","dewPoint":"19","cloudsCode":"OVC","datetime":"2021-05-15 13:20:00","temperature":"20","humidity":93,"stationName":"SANGJU TMQ-53P","weatherCondition":"n/a","windDirection":280,"windSpeed":"01","lat":36.4},{"lng":128.3,"observation":"KQEX 151320Z AUTO 19003KT 4800 -RA OVC008 22/20 A2965 RMK A02 TSNO","ICAO":"KQEX","clouds":"overcast","dewPoint":"20","cloudsCode":"OVC","datetime":"2021-05-15 13:20:00","temperature":"22","humidity":88,"stationName":"GUMI   TMQ-53P","weatherCondition":"n/a","windDirection":190,"windSpeed":"03","lat":36.1}]}
+-->
